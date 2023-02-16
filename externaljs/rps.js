@@ -43,7 +43,7 @@ function playRound(playerSelection, computerSelection, gamePoints) {
   }
 }
 
-function game() {
+/*function game() {
   let gamePoints = 0;
   for (let i = 0; i < 5; i++) {
     const playerPrompt1 = prompt("Please enter which weapon you're picking!!!");
@@ -65,3 +65,27 @@ function game() {
 }
 
 game();
+*/
+
+
+
+function buttonCreator() {
+  let myDiv = document.getElementById("myDiv");
+const btns = ["Rock", "Paper", "Scissors"];
+  for (let i = 0; i < btns.length; i++) {
+    let htmlBtns = document.createElement("button");
+    htmlBtns.id = btns[i];
+    htmlBtns.innerHTML = btns[i];
+    myDiv.appendChild(htmlBtns);
+    htmlBtns.addEventListener("click", function(){
+      let weaponSelected = htmlBtns.innerHTML;
+      alert(weaponSelected);
+      return weaponSelected;
+    });
+  }
+}
+
+playerSelection = buttonCreator();
+
+
+
